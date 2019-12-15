@@ -16,7 +16,7 @@ const indexRoutes 	   = require('./routes/index'),
 	  commentRoutes    = require('./routes/comments'),
 	  campgroundRoutes = require('./routes/campgrounds');
 
-mongoose.connect('mongodb+srv://MayheMatan:Mayhematan123@cluster0-cp7uu.mongodb.net/yelp_camp?retryWrites=true&w=majority', {
+mongoose.connect(process.env.DATABASEURL, {
 	useNewUrlParser: true,
 	useCreateIndex: true,
 	useUnifiedTopology: true
